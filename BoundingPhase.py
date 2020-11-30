@@ -1,17 +1,17 @@
-#import math
+# import math
 
 x = []
-x.append(1) #initial guess
-delta = 0.001 #increment size
-k = 0 #keep track of different values of x
+x.append(1) # initial guess
+delta = 0.001 # increment size
+k = 0 # keep track of different values of x
 
-#precision = 10**10 #The number of decimal places we want the answer correct to
+# precision = 10**10 #The number of decimal places we want the answer correct to
 
-#Calculate function value at any particular point
+# Calculate function value at any particular point
 def function(x):
     return x*x + 54/x
 
-#we have to check if the choosen delta should be positive or negative
+# we have to check if the choosen delta should be positive or negative
 def checkDelta(d):
     if(function(x[0] - d) >= function(x[0]) and function(x[0]) >= function(x[0] + d)):
         return ("Delta is +ve"),0
@@ -25,7 +25,7 @@ def checkDelta(d):
 
 def bounding_phase(k):
     
-    #Continue to perform iteration until 'if' fails
+    # Continue to perform iteration until 'if' fails
     while(True):
     
         x.append(x[k] + (2**k)*delta)
@@ -35,10 +35,11 @@ def bounding_phase(k):
     
         else:
             
-            '''print("Minimum lies in (" + str(math.trunc((x[k-1]*precision)/precision)) + ", " 
-                  + str(math.trunc((x[k+1]*precision)/precision)) + ")")'''
-    
+             
             print("Minimum point lies in (" + str(x[k-1]) + ", " + str(x[k+1]) + ")")
             return False
     
 bounding_phase(k)
+
+'''print("Minimum lies in (" + str(math.trunc((x[k-1]*precision)/precision)) + ", " 
+                  + str(math.trunc((x[k+1]*precision)/precision)) + ")")'''
