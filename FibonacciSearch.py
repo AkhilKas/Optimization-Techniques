@@ -2,7 +2,7 @@ a = int(input("Enter lower bound : ")) #lower bound
 b = int(input("Enter upper bound : ")) #upper bound
 
 def function(x):
-    return (x*x + 54/x) #calculate function value
+    return (x*x + 54/x) #calculate unimodal function value
 
 L = b - a #used to calculate L*
 
