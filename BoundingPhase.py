@@ -1,7 +1,11 @@
+#import math
+
 x = []
-x[0] = 1 #initial guess
+x.append(1) #initial guess
 delta = 0.001 #increment size
 k = 0 #keep track of different values of x
+
+#precision = 10**10 #The number of decimal places we want the answer correct to
 
 #Calculate function value at any particular point
 def function(x):
@@ -18,5 +22,23 @@ def checkDelta(d):
 
     else:
         return ("Initial guess is incorrect, choose another value and try again"),-1
+
+def bounding_phase(k):
     
-   
+    #Continue to perform iteration until 'if' fails
+    while(True):
+    
+        x.append(x[k] + (2**k)*delta)
+    
+        if(function(x[k+1]) < function(x[k])):
+            k = k + 1
+    
+        else:
+            
+            '''print("Minimum lies in (" + str(math.trunc((x[k-1]*precision)/precision)) + ", " 
+                  + str(math.trunc((x[k+1]*precision)/precision)) + ")")'''
+    
+            print("Minimum point lies in (" + str(x[k-1]) + ", " + str(x[k+1]) + ")")
+            return False
+    
+bounding_phase(k)

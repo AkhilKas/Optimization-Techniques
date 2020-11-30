@@ -1,5 +1,5 @@
-a = int(input("Enter lower bound : ")) #lower bound 
-b = int(input("Enter upper bound : ")) #upper bound
+a = float(input("Enter lower bound : ")) #lower bound 
+b = float(input("Enter upper bound : ")) #upper bound
 
 def function(x):
     return (x*x + 54/x) #calculate unimodal function value

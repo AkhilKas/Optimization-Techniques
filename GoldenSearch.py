@@ -1,5 +1,5 @@
-a = int(input("Enter lower bound : "))
-b = int(input("Enter upper bound : "))
+a = float(input("Enter lower bound : "))
+b = float(input("Enter upper bound : "))
 
 epsilon = 0.0001
 
