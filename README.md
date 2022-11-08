@@ -1,4 +1,4 @@
-# OptimizationTechniques
+# Optimization-Techniques
 ### What is optimization?
 Maximizing or minimizing some function relative to some set,often representing a range of choices available in a certain situation.<br>
 The function allows comparison of the different choices for determining which might be “best”. <br> <br>
